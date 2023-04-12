@@ -1,6 +1,6 @@
-# Hello there, friend.
+# 👽 Hello there, friend.
 
-## Why I created this project
+## ？ Why I created this project 
 
 I found a very aestetic coffee shop website that I am going to attempt to re create in Remix, [Rooster Coffee House](https://roostercoffeehouse.com/). 
 
@@ -12,9 +12,9 @@ My intention for this app is to gain knowledge of Remix and other React server s
   * understand best practices for file routing and useage of SSR and CSR.
 
 
-## Authentication Strech Goals
+## 🔒 Authentication Strech Goals
 
-### Sessions | Clerk
+### ！Sessions | Clerk
 
 There are a couple of things i want to try with this project 
 
