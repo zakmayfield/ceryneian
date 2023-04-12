@@ -52,7 +52,7 @@ function LinkItem(link: LinkItemProps) {
 
 export default function Nav() {
   return (
-    <nav className='flex w-full border justify-between items-center px-5 py-5 font-extralight'>
+    <nav className='flex w-full justify-between items-center px-5 py-5 font-extralight bg-pale-aqua'>
       <div className='text-4xl'>
         <LinkItem data={{ slug: '/', content: ' 🐓 ' }} />
       </div>
