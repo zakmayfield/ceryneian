@@ -1,4 +1,4 @@
-import { Link } from '@remix-run/react';
+import { Link, NavLink } from '@remix-run/react';
 
 type LinkItemProps = {
   data: {
@@ -38,17 +38,26 @@ const links = [
 function LinkItem(link: LinkItemProps) {
   const { slug, content } = link.data;
 
-  return <Link to={slug}>{content}</Link>;
+  return (
+    <NavLink
+      to={slug}
+      className={({ isActive }) =>
+        isActive && slug !== '/' ? 'font-light border-b pb-1' : ''
+      }
+    >
+      {content}
+    </NavLink>
+  );
 }
 
 export default function Nav() {
   return (
-    <nav className='flex w-full border-2 justify-between items-center px-5 py-5 font-extralight'>
+    <nav className='flex w-full border justify-between items-center px-5 py-5 font-extralight'>
       <div className='text-4xl'>
         <LinkItem data={{ slug: '/', content: ' 🐓 ' }} />
       </div>
 
-      <ul className='flex gap-5 tracking-wide '>
+      <ul className='grid grid-cols-5 tracking-wide'>
         {links.map((link: LinkData) => (
           <li key={link.slug}>
             <LinkItem data={link} />
@@ -56,11 +65,11 @@ export default function Nav() {
         ))}
       </ul>
 
-      <div className='flex gap-5'>
+      <div className='grid grid-cols-3 text-center'>
         <div>
           <LinkItem data={{ slug: 'account', content: 'Account' }} />
         </div>
-        <div>🔎</div>
+        <div className='text-right'>🔎</div>
         <div>🛒</div>
       </div>
     </nav>
