@@ -24,7 +24,7 @@ export default function Index() {
           <h3 className='font-playfair-display text-5xl font-bold tracking-wider'>
             From Toronto with 🤍
           </h3>
-          <p className='my-10 w-11/12 mx-auto font-light'>
+          <p className='my-10 w-11/12 mx-auto font-normal tracking-widest'>
             Our three shops are open seven days a week for all your caffeine &
             friendship needs. Come by for a bite and some banter. Grab a seat
             inside or out at King and Jarvis or enjoy our patio overlooking the
