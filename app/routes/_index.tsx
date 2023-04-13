@@ -33,6 +33,21 @@ export default function Index() {
           <p className='font-light'>We thank you kindly for stopping by.</p>
         </div>
       </div>
+
+      <div>
+        {/* 2 columns - 2 rows - last div spans 2 cols */}
+        <div className='grid grid-cols-3 place-items-center font-playfair-display font-bold text-3xl tracking-wider'>
+          <div className='py-60 px-5 bg-red-200 w-full text-center'>
+            <h3>479 Broadview Avenue</h3>
+          </div>
+          <div className='py-60 px-5 bg-purple-200 w-full text-center'>
+            <h3>343 King Street East</h3>
+          </div>
+          <div className='py-60 px-5 bg-green-200 w-full  text-center'>
+            <h3>568 Jarvis Street</h3>
+          </div>
+        </div>
+      </div>
     </>
   );
 }

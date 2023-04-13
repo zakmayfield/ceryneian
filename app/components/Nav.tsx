@@ -59,7 +59,7 @@ export default function Nav() {
         <LinkItem data={{ slug: '/', content: ' 🐓 ' }} />
       </div>
 
-      <ul className='grid grid-cols-5'>
+      <ul className='grid grid-cols-5 tracking-wider'>
         {links.map((link: LinkData) => (
           <li key={link.slug}>
             <LinkItem data={link} />
