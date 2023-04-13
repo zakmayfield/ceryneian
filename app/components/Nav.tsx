@@ -42,7 +42,9 @@ function LinkItem(link: LinkItemProps) {
     <NavLink
       to={slug}
       className={({ isActive }) =>
-        isActive && slug !== '/' ? 'font-light border-b pb-1' : ''
+        `pb-0 border-b-2 border-transparent ${
+          slug !== '/' ? 'hover:border-b-2 hover:border-gray-700' : ''
+        } ${isActive && slug !== '/' ? 'font-normal' : ''}`
       }
     >
       {content}
@@ -52,12 +54,12 @@ function LinkItem(link: LinkItemProps) {
 
 export default function Nav() {
   return (
-    <nav className='flex w-full justify-between items-center px-5 py-5 font-extralight bg-pale-aqua'>
+    <nav className='flex w-full justify-between items-center px-7 py-6 bg-pale-aqua tracking-wide font-light font-slate-gray sticky top-0 z-10 text-sm'>
       <div className='text-4xl'>
         <LinkItem data={{ slug: '/', content: ' 🐓 ' }} />
       </div>
 
-      <ul className='grid grid-cols-5 tracking-wide'>
+      <ul className='grid grid-cols-5 tracking-wider'>
         {links.map((link: LinkData) => (
           <li key={link.slug}>
             <LinkItem data={link} />
@@ -65,12 +67,10 @@ export default function Nav() {
         ))}
       </ul>
 
-      <div className='grid grid-cols-3 text-center'>
-        <div>
-          <LinkItem data={{ slug: 'account', content: 'Account' }} />
-        </div>
-        <div className='text-right'>🔎</div>
-        <div>🛒</div>
+      <div className='grid grid-cols-3 place-items-center'>
+        <LinkItem data={{ slug: 'account', content: 'Account' }} />
+        <div className='text-2xl place-self-end'>🔎</div>
+        <div className='text-2xl place-self-end'>🛒</div>
       </div>
     </nav>
   );

@@ -3,11 +3,9 @@ module.exports = {
   content: ['./app/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
-      backgroundColor: {
+      colors: {
         'pale-aqua': '#C9D8D3',
         amber: '#FDC76F',
-      },
-      textColor: {
         'slate-gray': '#3C3C3C',
       },
       fontFamily: {
