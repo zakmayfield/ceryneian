@@ -42,7 +42,7 @@ function LinkItem(link: LinkItemProps) {
     <NavLink
       to={slug}
       className={({ isActive }) =>
-        isActive && slug !== '/' ? 'font-light border-b pb-1' : ''
+        isActive && slug !== '/' ? 'font-normal' : ''
       }
     >
       {content}
@@ -52,12 +52,12 @@ function LinkItem(link: LinkItemProps) {
 
 export default function Nav() {
   return (
-    <nav className='flex w-full justify-between items-center px-5 py-5 font-extralight bg-pale-aqua'>
+    <nav className='flex w-full justify-between items-center px-5 py-7 bg-pale-aqua tracking-wide font-extralight font-slate-gray sticky top-0 z-10'>
       <div className='text-4xl'>
         <LinkItem data={{ slug: '/', content: ' 🐓 ' }} />
       </div>
 
-      <ul className='grid grid-cols-5 tracking-wide'>
+      <ul className='grid grid-cols-5 text-sm'>
         {links.map((link: LinkData) => (
           <li key={link.slug}>
             <LinkItem data={link} />
