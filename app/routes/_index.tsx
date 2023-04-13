@@ -37,14 +37,17 @@ export default function Index() {
       <div>
         {/* 2 columns - 2 rows - last div spans 2 cols */}
         <div className='grid grid-cols-3 place-items-center font-playfair-display font-bold text-3xl tracking-wide text-slate-gray'>
-          <div className='py-60 px-5 bg-red-200 w-full text-center '>
-            <h3>479 Broadview Avenue</h3>
+          <div className="py-60 px-5 bg-red-200 w-full text-center relative bg-[url('~/images/shop1.jpeg')] bg-cover bg-center">
+            <div className='absolute inset-0 bg-[color:rgb(255,255,255,0.4)] mix-blend-lighten' />
+            <h3 className='relative z-10'>479 Broadview Avenue</h3>
           </div>
-          <div className='py-60 px-5 bg-purple-200 w-full text-center'>
-            <h3>343 King Street East</h3>
+          <div className="py-60 px-5 bg-red-200 w-full text-center relative bg-[url('~/images/shop2.jpeg')] bg-cover bg-center">
+            <div className='absolute inset-0 bg-[color:rgb(255,255,255,0.4)] mix-blend-lighten' />
+            <h3 className='relative z-10'>343 King Street East</h3>
           </div>
-          <div className='py-60 px-5 bg-green-200 w-full  text-center'>
-            <h3>568 Jarvis Street</h3>
+          <div className="py-60 px-5 bg-red-200 w-full text-center relative bg-[url('~/images/shop3.jpeg')] bg-cover bg-center">
+            <div className='absolute inset-0 bg-[color:rgb(255,255,255,0.4)] mix-blend-lighten' />
+            <h3 className='relative z-10'>568 Jarvis Street</h3>
           </div>
         </div>
       </div>
