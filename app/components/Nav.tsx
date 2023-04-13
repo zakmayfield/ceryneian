@@ -1,4 +1,4 @@
-import { Link } from '@remix-run/react';
+import { NavLink } from '@remix-run/react';
 
 type LinkItemProps = {
   data: {
@@ -38,17 +38,28 @@ const links = [
 function LinkItem(link: LinkItemProps) {
   const { slug, content } = link.data;
 
-  return <Link to={slug}>{content}</Link>;
+  return (
+    <NavLink
+      to={slug}
+      className={({ isActive }) =>
+        `pb-0 border-b-2 border-transparent ${
+          slug !== '/' ? 'hover:border-b-2 hover:border-gray-700' : ''
+        } ${isActive && slug !== '/' ? 'font-normal' : ''}`
+      }
+    >
+      {content}
+    </NavLink>
+  );
 }
 
 export default function Nav() {
   return (
-    <nav className='flex w-full border-2 justify-between items-center px-5 py-5 font-extralight'>
+    <nav className='flex w-full justify-between items-center px-7 py-6 bg-pale-aqua tracking-wide font-light font-slate-gray sticky top-0 z-10 text-sm'>
       <div className='text-4xl'>
         <LinkItem data={{ slug: '/', content: ' 🐓 ' }} />
       </div>
 
-      <ul className='flex gap-5 tracking-wide '>
+      <ul className='grid grid-cols-5 tracking-wider'>
         {links.map((link: LinkData) => (
           <li key={link.slug}>
             <LinkItem data={link} />
@@ -56,12 +67,10 @@ export default function Nav() {
         ))}
       </ul>
 
-      <div className='flex gap-5'>
-        <div>
-          <LinkItem data={{ slug: 'account', content: 'Account' }} />
-        </div>
-        <div>🔎</div>
-        <div>🛒</div>
+      <div className='grid grid-cols-3 place-items-center'>
+        <LinkItem data={{ slug: 'account', content: 'Account' }} />
+        <div className='text-2xl place-self-end'>🔎</div>
+        <div className='text-2xl place-self-end'>🛒</div>
       </div>
     </nav>
   );
