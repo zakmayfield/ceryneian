@@ -10,7 +10,7 @@ export default function Index() {
       <div className="relative bg-[url('~/images/coffee.jpeg')] bg-cover bg-center min-h-screen text-slate-gray flex justify-center items-center">
         <div className='absolute inset-0 bg-[color:rgb(255,255,255,0.4)] mix-blend-lighten' />
         <div className='absolute text-slate-gray '>
-          <div className='border-b text-center font-sans uppercase tracking-widest text-lg pb-1 font-source-sans-pro'>
+          <div className='border-b text-center uppercase tracking-widest text-lg pb-1 font-source-sans-pro'>
             Hello Friend
           </div>
           <h2 className='text-7xl font-bold mt-3 font-playfair-display'>
