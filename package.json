@@ -1,6 +1,7 @@
 {
   "private": true,
   "sideEffects": false,
+  "description": "clone of a coffee shop website to enhance my skills as a Remix developer",
   "scripts": {
     "build": "remix build",
     "deploy": "fly deploy --remote-only",

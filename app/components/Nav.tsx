@@ -38,6 +38,9 @@ const links = [
 function LinkItem(link: LinkItemProps) {
   const { slug, content } = link.data;
 
+  // i would like the animation to be something of the sort:
+    // -> no border -> :hover -> bottom border slides in left to right
+    // i could similate no border, i could in theory have a border that has a width of 0 (if thats even possible) and then when the hover state is actived i could start a transition of .1s to grow the bottom border from width:0 to width:100
   return (
     <NavLink
       to={slug}
@@ -59,7 +62,7 @@ export default function Nav() {
         <LinkItem data={{ slug: '/', content: ' 🐓 ' }} />
       </div>
 
-      <ul className='grid grid-cols-5 tracking-wider'>
+      <ul className='grid grid-cols-5 tracking-wider place-items-center'>
         {links.map((link: LinkData) => (
           <li key={link.slug}>
             <LinkItem data={link} />
