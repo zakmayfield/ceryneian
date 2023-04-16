@@ -8,17 +8,15 @@ My intention for this app is to gain knowledge of Remix and other React server s
 
 **My goals for this build are as follows**: 
   * gain insight into `Remix` and how to effeciently build websites with it
-  * learn how to `create sessions` that store user information that can be used to authenticate my application
-  * understand best practices for file routing and useage of SSR and CSR.
+  * possibly learn how to `create sessions` that store user information that can be used to authenticate my application
+  * integrating BaaS tech into my app, such as `Supabase` or `Clerk`
+  * understand best practices for file routing and useage of `SSR` and `CSR`.
 
 
-## 🔒 Authentication Strech Goals
+## 🔒 Authentication & Database Strech Goals
 
-### ！Sessions | Clerk
+### ！Sessions | Clerk | Supabase
 
-There are a couple of things i want to try with this project 
-
-* Firstly I am going to `hand roll authentication` with `sessions` & `cookies` as the main way to  authenticate users of the app.
-* As a `second stretch goal`, I'm going to *attempt* and implement `Clerk.js` as the authentication system. I'm hoping this will allow me to gain knowledge of auth libraries.
+I struggle with authentication. Adding a `BaaS` to manage my auth/db via a service sounds appealing. This might lead me to using `Supabase` as my BaaS, I've heard a lot of good things about Supabase. The database would be relatively small, maybe a `user` auth table, `product` table, and `cart`/`orders` table. A few relations at most + authentication.
 
 *Note that authentication is a stretch goal because i struggle with the implementation of it most of the time*
